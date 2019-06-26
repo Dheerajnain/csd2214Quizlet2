@@ -11,18 +11,26 @@
         function init() {
             stage = new createjs.Stage("stage-canvas");
             sunShape = new createjs.Shape();
-            sunShape.graphics.beginFill("#F00");
+            sunShape.graphics.beginFill("black");
             sunShape.graphics.drawCircle(0, 0, 25);
             sunShape.graphics.endFill();
             sunShape.x = 25;
             sunShape.y = 25;
             stage.addChild(sunShape);
             createjs.Tween.get(sunShape, {
-                loop: true
-            })
+                    loop: true
+                })
+                .to({
+                    x: 25,
+                    y: 525
+                }, 3000);
+            createjs.Ticker.addEventListener("tick", tickHandler);
+        }
+        4
+
+        function tickHandler(e) {
             stage.update();
         }
-        3
     </script>
     <style>
         body {
