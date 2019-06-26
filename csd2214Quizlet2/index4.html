@@ -21,12 +21,17 @@
                     loop: true
                 })
                 .to({
+                    x: 525,
+                    y: 25
+                }, 3000)
+                .wait(2000)
+                .to({
                     x: 25,
-                    y: 525
-                }, 10000);
+                    y: 25
+                }, 3000);
+            createjs.Ticker.setFPS(60);
             createjs.Ticker.addEventListener("tick", tickHandler);
         }
-        4
 
         function tickHandler(e) {
             stage.update();
