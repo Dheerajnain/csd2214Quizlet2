@@ -11,8 +11,8 @@
         function init() {
             stage = new createjs.Stage("stage-canvas");
             sunShape = new createjs.Shape();
-            sunShape.graphics.beginFill("black");
-            sunShape.graphics.drawCircle(0, 0, 25);
+            sunShape.graphics.beginFill("skyblue");
+            sunShape.graphics.drawRect(0, 0, 25, 25);
             sunShape.graphics.endFill();
             sunShape.x = 25;
             sunShape.y = 25;
@@ -45,8 +45,8 @@
         }
         
         canvas {
-            border: solid 2px #000;
-            background-color: #fff;
+            border: solid 2px rgb(21, 214, 21);
+            background-color: rgb(22, 6, 112);
             display: block;
             margin: 0px auto 0px auto;
             padding-left: 0;
