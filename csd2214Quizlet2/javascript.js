@@ -5,6 +5,6 @@ function waitingFn(TimeInMs) {
 
     }
 }
-
+debugger;
 waitingFn(3000);
 console.log("function call has just ended");
